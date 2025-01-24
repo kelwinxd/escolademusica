@@ -108,6 +108,12 @@ document.querySelector('.close2').addEventListener('click', () => {
 
 })
 
+blurOverlay.addEventListener('click', () => {
+  document.querySelector('.aulas-schema').classList.remove('active');
+  blurOverlay.style.display = 'none'; // Oculta a camada de blur
+  document.body.classList.remove('no-scroll');
+});
+
 const closeBtn = document.querySelector('.close')
 
 closeBtn.addEventListener('click', () => {
