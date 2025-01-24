@@ -91,18 +91,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const linkAula = document.querySelector('.more')
+const blurOverlay = document.querySelector('.blur-overlay');
 
 linkAula.addEventListener('click', () => {
   document.querySelector('.aulas-schema').classList.add('active')
   document.body.classList.add('no-scroll');
+  blurOverlay.style.display = 'block'; 
   
 })
 
 document.querySelector('.close2').addEventListener('click', () => {
   document.querySelector('.aulas-schema').classList.remove('active')
+  blurOverlay.style.display = 'none'; 
   
   document.body.classList.remove('no-scroll');
 
 })
+
+const closeBtn = document.querySelector('.close')
+
+closeBtn.addEventListener('click', () => {
+  nav.style.top = "-100%";
+})
+
+gsap.from('.hero-desc', {opacity:0,duration:1,delay:0.7,x:-30})
+gsap.from('.hero-left h1', {opacity:0,duration:1,delay:0.3,x:-30})
+
 
   
