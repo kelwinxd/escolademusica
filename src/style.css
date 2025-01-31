@@ -226,11 +226,20 @@ bottom: 0;
 .item {
     flex: 1;
     text-align: center;
-    border: 1px solid black;
+
     border-radius: 10px;
     padding-inline: 0.8rem;
     padding-block: 2rem;
+
 }
+
+.card {
+    background:linear-gradient(#d4c751,#f8ea68);
+    color: #3b3605;
+    box-shadow: 2px 7px 8px rgba(0, 0, 0, 0.7);
+}
+
+
 
 .item2 {
     flex: 1;
