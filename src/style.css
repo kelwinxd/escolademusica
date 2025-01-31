@@ -10,7 +10,7 @@
 }
 
 :root {
-    --btn-hero:rgb(8, 201, 18); 
+    --btn-hero:#ecdb43;
 }
 
 body {
@@ -29,11 +29,12 @@ header {
     padding-block: 1.5rem;
     max-width: 1280px;
     margin-inline: auto;
+    background-color:transparent;
    
 }
 
 .logo {
-    max-width: 170px;
+    max-width: 125px;
 }
 
 .logo img {
@@ -77,10 +78,17 @@ nav ul li a:hover {
 
 .hero-container {
     width: 100%;
-    background-color: black;
+
     max-height: 600px;
     position: relative;
     overflow-x: hidden;
+
+ 
+}
+
+.container-back {
+    width: 100%;
+    background: url("./imgs/bg-cont2.png");
 }
 
 .close {
@@ -105,6 +113,7 @@ border: solid 1px #aa9c21;
     padding-top: 2rem;
     overflow-x: hidden;
     min-height:600px ;
+
 }
 
 .hero-left {
@@ -129,7 +138,7 @@ border: solid 1px #aa9c21;
 .hero-btn {
     margin-top: 2rem;
     border: none;
-    background-color:#37E827;
+    background-color:#ecdb43;;
     border-radius: 10px;
     font-size: 1.2rem;
     padding: 0.9em 0.7em;
@@ -152,6 +161,9 @@ border: solid 1px #aa9c21;
     
 }
 
+
+/*
+
 #hero-img {
     width: 1100px;
 z-index: 1;
@@ -159,6 +171,16 @@ right: 0px;
 position: absolute;
 bottom: 0;
 }
+*/
+#hero-img {
+    width: 610px;
+z-index: 1000000000;
+right: 300px;
+position: absolute;
+
+bottom: 1px;
+}
+
 
 .hero-right img {
 width: 1100px;
@@ -172,7 +194,7 @@ bottom: 0;
 /* info */
 .info-container {
     width: 100%;
-    background-color: #2872b8;
+    background-image:linear-gradient(#12184a,#006bdf);
     border-radius: 15px 15px 0 0;
 }
 
@@ -369,7 +391,7 @@ bottom: 0;
 }
 .contato-container {
     width: 100%;
-    background-color: #ecdb43;
+    background:linear-gradient(#0078FF,#12184a)
 }
 
 
@@ -489,8 +511,9 @@ iframe {
 @media (width < 1199px){
 
     #hero-img {
-        width: 1000px;
-        right: -250px;
+        width: 600px;
+        right: -30px;
+        bottom: -30px;
     }
 
     .hero-left {
@@ -587,8 +610,10 @@ bottom: 0;
 
     
     #hero-img {
-        width: 900px;
-        right: -270px;
+        width: 600px;
+        right: -100px;
+        z-index: 1;
+        bottom: -50px;
     }
 
     .contato {
@@ -641,6 +666,10 @@ text-align: center;
         margin-inline: auto;
     }
 
+    .hero-container, .container-back, .hero-right {
+        overflow-y: hidden;
+    }
+
     .items-wrapper {
         flex-direction: column;
         padding-inline: 2rem;
@@ -651,8 +680,9 @@ text-align: center;
      }
 
      #hero-img {
-        width: 900px;
-        right: -450px;
+        width: 550px;
+        right: -160px;
+ 
     }
 
     .aulas-schema {
